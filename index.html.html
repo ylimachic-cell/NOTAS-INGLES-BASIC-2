@@ -48,11 +48,11 @@
                 </div>
                 <div>
                     <span class="text-xs font-semibold tracking-wider text-blue-400 uppercase">Teacher: Yury Limachi Cartolin</span>
-                    <h1 class="text-2xl font-black tracking-tight">Grupo 6-Entrega de Notas</h1>
+                    <h1 class="text-2xl font-black tracking-tight">Grupo 6 - Entrega de Notas</h1>
                 </div>
             </div>
             <div class="flex items-center gap-2">
-                <span class="text-xs font-semibold px-3 py-1.5 bg-white/10 rounded-lg border border-white/10">Curso: Inglés Ciclo 2</span>
+                <span class="text-xs font-semibold px-3 py-1.5 bg-white/10 rounded-lg border border-white/10">Curso: Inglés Básico 2</span>
             </div>
         </div>
     </header>
@@ -79,7 +79,7 @@
                         id="dni-input" 
                         maxlength="8" 
                         pattern="\d{8}"
-                        placeholder="Ingrese DNI (ej. 46857595)" 
+                        placeholder="Ingrese DNI (ej. 70639547)" 
                         class="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium tracking-widest placeholder:tracking-normal placeholder:font-normal transition duration-200"
                         required
                     >
@@ -90,7 +90,12 @@
                 </button>
             </form>
 
-           
+            <div class="mt-4 flex flex-wrap gap-2 justify-center text-xs text-slate-500">
+                <span class="font-semibold">DNI de ejemplo:</span> 
+                <span class="cursor-pointer underline hover:text-blue-600 font-mono" onclick="demoDni('70639547')">70639547 (Anahí)</span> | 
+                <span class="cursor-pointer underline hover:text-blue-600 font-mono" onclick="demoDni('74980303')">74980303 (Jhansel)</span> | 
+                <span class="cursor-pointer underline hover:text-blue-600 text-red-600 font-mono" onclick="demoDni('60413899')">60413899 (Flor - NSP)</span>
+            </div>
         </div>
 
         <!-- PLACEHOLDER INICIAL -->
@@ -319,222 +324,222 @@
         const studentsDatabase = [
             { 
                 id: 1, dni: "70639547", name: "ALCARRAZ MARIÑO ANAHI LIZ", 
-                list: 15, wri: 15, spe: 12, rea: 11, plat: 15, prom1: 13, 
-                mid: 11, final: 15, spe_exam: 14, prom2: 13.6, final_grade: 14,
+                list: "15.0", wri: "15.0", spe: "12.0", rea: "11.0", plat: "15.0", prom1: "13.5", 
+                mid: "11.3", final: "15.4", spe_exam: "14.0", prom2: "13.6", final_grade: 14,
                 detailed: {
-                    list_tasks: [3, 2, 2, 3, 4], // Suma: 15
-                    wri_tasks: [4, 2, 4.0, 1.5, 1, 3], // Suma: 15.0
-                    spe_tasks: [2, 3, 2, 5], // Total: 12
-                    rea_tasks: [2, 3, 2, 2, 2], // Total: 11
-                    plat_prog: "46%", plat_time: "15 hrs", plat_done: "14 ej.",
+                    list_tasks: [3, 3, 3, 3, 3], // Suma: 15.0
+                    wri_tasks: [3.5, 3.0, 3.0, 2.5, 1.5, 1.5], // Suma: 15.0
+                    spe_tasks: [3, 3, 3, 3], // Total: 12.0
+                    rea_tasks: [2, 2.5, 2, 2.5, 2], // Total: 11.0
+                    plat_prog: "50%", plat_time: "15 hrs", plat_done: "15.0",
                     project: 4, tvshow: 3.5, midterm_calc: 11.3, final_calc: 15.4
                 }
             },
             { 
                 id: 2, dni: "74980303", name: "ALCARRAZ SALAZAR JHANSEL ANDREE", 
-                list: 15, wri: 14, spe: 14, rea: 14, plat: 16, prom1: 14, 
-                mid: 14, final: 18, spe_exam: 14, prom2: 15.2, final_grade: 15,
+                list: "14.5", wri: "13.5", spe: "14.0", rea: "14.0", plat: "16.1", prom1: "14.2", 
+                mid: "14.3", final: "17.7", spe_exam: "14.0", prom2: "15.2", final_grade: 15,
                 detailed: {
-                    list_tasks: [3, 2, 3, 3, 4], // Suma: 15
-                    wri_tasks: [3.5, 2.0, 2.5, 3.5, 1.0, 1.5], // Suma: 14.0
-                    spe_tasks: [3, 4, 3, 4], // Total: 14
-                    rea_tasks: [2, 4, 2, 4, 2], // Total: 14
-                    plat_prog: "49%", plat_time: "16 hrs", plat_done: "14 ej.",
+                    list_tasks: [3, 2.5, 3, 3, 3], // Suma: 14.5
+                    wri_tasks: [3.5, 2.0, 2.5, 3.0, 1.0, 1.5], // Suma: 13.5
+                    spe_tasks: [3, 4, 3, 4], // Total: 14.0
+                    rea_tasks: [2, 4, 2, 4, 2], // Total: 14.0
+                    plat_prog: "55%", plat_time: "16 hrs", plat_done: "16.1",
                     project: 5, tvshow: 3.5, midterm_calc: 14.3, final_calc: 17.7
                 }
             },
             { 
                 id: 3, dni: "72588844", name: "ALTAMIRANO GUILLERMO BORYS DANIEL", 
-                list: 12, wri: 14, spe: 13, rea: 13, plat: 17, prom1: 13, 
-                mid: 11, final: 17, spe_exam: 13, prom2: 13.6, final_grade: 13,
+                list: "14.0", wri: "13.5", spe: "12.5", rea: "12.5", plat: "16.9", prom1: "13.5", 
+                mid: "11.0", final: "17.1", spe_exam: "13.0", prom2: "13.6", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 3, 1, 3, 2], // Suma: 12
-                    wri_tasks: [3.5, 2.0, 3.0, 2.5, 1.0, 2.0], // Suma: 14.0
-                    spe_tasks: [3, 3, 3, 4], // Total: 13
-                    rea_tasks: [2, 4, 2, 2, 3], // Total: 13
-                    plat_prog: "52%", plat_time: "17 hrs", plat_done: "13 ej.",
+                    list_tasks: [3, 3, 2, 3, 3], // Suma: 14.0
+                    wri_tasks: [3.5, 2.0, 3.0, 2.0, 1.0, 2.0], // Suma: 13.5
+                    spe_tasks: [3, 3, 3, 3.5], // Total: 12.5
+                    rea_tasks: [2, 3, 2.5, 2, 3], // Total: 12.5
+                    plat_prog: "60%", plat_time: "17 hrs", plat_done: "16.9",
                     project: 3, tvshow: 4, midterm_calc: 11.0, final_calc: 17.1
                 }
             },
             { 
                 id: 4, dni: "43345069", name: "ALTAMIRANO TELLO JOSE ADILIO", 
-                list: 12, wri: 11, spe: 10, rea: 11, plat: 19, prom1: 12, 
-                mid: 16, final: 17, spe_exam: 12, prom2: 14.5, final_grade: 13,
+                list: "12.0", wri: "12.0", spe: "11.5", rea: "12.0", plat: "19.1", prom1: "12.6", 
+                mid: "15.7", final: "16.6", spe_exam: "12.0", prom2: "14.5", final_grade: 14,
                 detailed: {
-                    list_tasks: [1, 2, 3, 4, 2], 
-                    wri_tasks: [3.0, 2.0, 1.5, 2.0, 1.0, 1.5], 
-                    spe_tasks: [2, 3, 2, 3], 
-                    rea_tasks: [2, 2, 2, 3, 2], 
-                    plat_prog: "58%", plat_time: "19 hrs", plat_done: "13 ej.",
+                    list_tasks: [2, 2, 3, 3, 2], // Suma: 12.0
+                    wri_tasks: [3.0, 2.0, 1.5, 2.0, 1.0, 2.5], // Suma: 12.0
+                    spe_tasks: [2.5, 3, 3, 3], // Total: 11.5
+                    rea_tasks: [2, 2, 3, 3, 2], // Total: 12.0
+                    plat_prog: "70%", plat_time: "19 hrs", plat_done: "19.1",
                     project: 3, tvshow: 3, midterm_calc: 15.7, final_calc: 16.6
                 }
             },
             { 
                 id: 5, dni: "60438426", name: "CARBAJAL MERINO CINTHIA MARICEL", 
-                list: 0, wri: 10, spe: 0, rea: 0, plat: 2, prom1: 3, 
-                mid: 11, final: 0, spe_exam: 13, prom2: 8.6, final_grade: 6,
+                list: "0.0", wri: "10.0", spe: "0.0", rea: "0.0", plat: "2.0", prom1: "2.7", 
+                mid: "11.3", final: "0.0", spe_exam: "13.0", prom2: "8.6", final_grade: 6,
                 detailed: {
                     list_tasks: [0, 0, 0, 0, 0], 
                     wri_tasks: [2.0, 1.0, 2.0, 1.0, 2.0, 2.0], 
                     spe_tasks: [0, 0, 0, 0], 
                     rea_tasks: [0, 0, 0, 0, 0], 
-                    plat_prog: "6%", plat_time: "2 hrs", plat_done: "2 ej.",
+                    plat_prog: "10%", plat_time: "2 hrs", plat_done: "2.0",
                     project: 3, tvshow: 4, midterm_calc: 11.3, final_calc: 0.0
                 }
             },
             { 
                 id: 6, dni: "73506894", name: "CCAHUANA CUSI JOEL ANGEL", 
-                list: 14, wri: 15, spe: 13, rea: 10, plat: 17, prom1: 13, 
-                mid: 14, final: 17, spe_exam: 14, prom2: 14.8, final_grade: 14,
+                list: "13.5", wri: "14.5", spe: "13.0", rea: "10.0", plat: "16.5", prom1: "13.2", 
+                mid: "14.0", final: "16.6", spe_exam: "14.0", prom2: "14.8", final_grade: 14,
                 detailed: {
-                    list_tasks: [1, 4, 5, 4, 0], 
-                    wri_tasks: [3.5, 2.5, 3.0, 2.0, 2.0, 2.0], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [2, 2, 2, 2, 2], 
-                    plat_prog: "50%", plat_time: "17 hrs", plat_done: "14 ej.",
+                    list_tasks: [2, 3, 3, 3.5, 2], // 13.5
+                    wri_tasks: [3.5, 2.5, 2.5, 2.0, 2.0, 2.0], // 14.5
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [2, 2, 2, 2, 2], // 10.0
+                    plat_prog: "61%", plat_time: "17 hrs", plat_done: "16.5",
                     project: 4, tvshow: 4, midterm_calc: 14.0, final_calc: 16.6
                 }
             },
             { 
                 id: 7, dni: "72810730", name: "CHIPANA MARCAS MONICA LIZETH", 
-                list: 17, wri: 17, spe: 16, rea: 16, plat: 17, prom1: 17, 
-                mid: 14, final: 17, spe_exam: 14, prom2: 14.8, final_grade: 16,
+                list: "17.0", wri: "17.0", spe: "16.0", rea: "16.0", plat: "16.9", prom1: "16.5", 
+                mid: "13.7", final: "17.1", spe_exam: "14.0", prom2: "14.8", final_grade: 16,
                 detailed: {
-                    list_tasks: [3, 3, 3, 4, 4], 
-                    wri_tasks: [4.0, 4.0, 3.0, 3.0, 2.0, 1.0], 
-                    spe_tasks: [4, 4, 4, 4], 
-                    rea_tasks: [3, 4, 3, 3, 3], 
-                    plat_prog: "52%", plat_time: "17 hrs", plat_done: "14 ej.",
+                    list_tasks: [3.5, 3.5, 3, 3.5, 3.5], // 17.0
+                    wri_tasks: [4.0, 4.0, 3.0, 3.0, 2.0, 1.0], // 17.0
+                    spe_tasks: [4, 4, 4, 4], // 16.0
+                    rea_tasks: [3, 4, 3, 3, 3], // 16.0
+                    plat_prog: "65%", plat_time: "17 hrs", plat_done: "16.9",
                     project: 3, tvshow: 5, midterm_calc: 13.7, final_calc: 17.1
                 }
             },
             { 
                 id: 8, dni: "78111265", name: "CRUZ HERHUAY JUAN CARLOS", 
-                list: 11, wri: 14, spe: 10, rea: 11, plat: 17, prom1: 12, 
-                mid: 16, final: 15, spe_exam: 13, prom2: 14.6, final_grade: 13,
+                list: "13.0", wri: "14.0", spe: "10.0", rea: "11.0", plat: "16.8", prom1: "12.5", 
+                mid: "16.0", final: "15.4", spe_exam: "13.0", prom2: "14.6", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 3, 4, 2, 0], 
-                    wri_tasks: [3.5, 3.0, 2.5, 2.0, 1.5, 1.5], 
-                    spe_tasks: [2, 3, 2, 3], 
-                    rea_tasks: [2, 2, 2, 3, 2], 
-                    plat_prog: "51%", plat_time: "17 hrs", plat_done: "13 ej.",
+                    list_tasks: [3, 3, 3, 2, 2], // 13.0
+                    wri_tasks: [3.5, 3.0, 2.5, 2.0, 1.5, 1.5], // 14.0
+                    spe_tasks: [2, 3, 2, 3], // 10.0
+                    rea_tasks: [2, 2, 2, 3, 2], // 11.0
+                    plat_prog: "63%", plat_time: "17 hrs", plat_done: "16.8",
                     project: 3, tvshow: 4, midterm_calc: 16.0, final_calc: 15.4
                 }
             },
             { 
                 id: 9, dni: "60834320", name: "DIAZ RIVAS ANDREA PAOLA", 
-                list: 15, wri: 12, spe: 14, rea: 13, plat: 17, prom1: 14, 
-                mid: 16, final: 17, spe_exam: 13, prom2: 15.1, final_grade: 14,
+                list: "14.5", wri: "12.0", spe: "14.0", rea: "13.0", plat: "16.8", prom1: "13.7", 
+                mid: "16.3", final: "16.6", spe_exam: "13.0", prom2: "15.1", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 2, 3, 4, 4], 
-                    wri_tasks: [3.0, 2.0, 2.0, 2.0, 1.5, 1.5], 
-                    spe_tasks: [3, 4, 3, 4], 
-                    rea_tasks: [2, 3, 3, 2, 3], 
-                    plat_prog: "51%", plat_time: "17 hrs", plat_done: "14 ej.",
+                    list_tasks: [3, 3, 3, 3, 2.5], // 14.5
+                    wri_tasks: [3.0, 2.0, 2.0, 2.0, 1.5, 1.5], // 12.0
+                    spe_tasks: [3, 4, 3, 4], // 14.0
+                    rea_tasks: [2, 3, 3, 2, 3], // 13.0
+                    plat_prog: "64%", plat_time: "17 hrs", plat_done: "16.8",
                     project: 3, tvshow: 4, midterm_calc: 16.3, final_calc: 16.6
                 }
             },
             { 
                 id: 10, dni: "71924635", name: "ESCOBAR HUAMAN ROLANDO ANGEL GABRIEL", 
-                list: 13, wri: 13, spe: 13, rea: 13, plat: 14, prom1: 13, 
-                mid: 11, final: 16, spe_exam: 13, prom2: 13.3, final_grade: 13,
+                list: "13.0", wri: "13.0", spe: "13.0", rea: "13.0", plat: "13.9", prom1: "13.1", 
+                mid: "11.0", final: "16.0", spe_exam: "13.0", prom2: "13.3", final_grade: 13,
                 detailed: {
-                    list_tasks: [3, 2, 2, 3, 3], 
-                    wri_tasks: [3.0, 2.0, 2.0, 2.0, 2.0, 2.0], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [2, 3, 3, 2, 3], 
-                    plat_prog: "42%", plat_time: "14 hrs", plat_done: "13 ej.",
+                    list_tasks: [3, 2, 2, 3, 3], // 13.0
+                    wri_tasks: [3.0, 2.0, 2.0, 2.0, 2.0, 2.0], // 13.0
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [2, 3, 3, 2, 3], // 13.0
+                    plat_prog: "42%", plat_time: "14 hrs", plat_done: "13.9",
                     project: 0, tvshow: 4, midterm_calc: 11.0, final_calc: 16.0
                 }
             },
             { 
                 id: 11, dni: "70536431", name: "HERNANDEZ HUAMAN YASUMI LUISA", 
-                list: 14, wri: 15, spe: 14, rea: 15, plat: 16, prom1: 15, 
-                mid: 13, final: 17, spe_exam: 13, prom2: 14.3, final_grade: 14,
+                list: "14.0", wri: "14.5", spe: "14.0", rea: "15.0", plat: "15.9", prom1: "14.5", 
+                mid: "13.3", final: "17.1", spe_exam: "13.0", prom2: "14.3", final_grade: 14,
                 detailed: {
-                    list_tasks: [3, 3, 2, 3, 3], 
-                    wri_tasks: [4.0, 3.0, 3.0, 2.0, 1.5, 1.5], 
-                    spe_tasks: [3, 4, 3, 4], 
-                    rea_tasks: [3, 4, 3, 3, 2], 
-                    plat_prog: "49%", plat_time: "16 hrs", plat_done: "15 ej.",
+                    list_tasks: [3, 3, 2, 3, 3], // 14.0
+                    wri_tasks: [4.0, 3.0, 3.0, 2.0, 1.5, 1.0], // 14.5
+                    spe_tasks: [3, 4, 3, 4], // 14.0
+                    rea_tasks: [3, 4, 3, 3, 2], // 15.0
+                    plat_prog: "59%", plat_time: "16 hrs", plat_done: "15.9",
                     project: 3, tvshow: 4, midterm_calc: 13.3, final_calc: 17.1
                 }
             },
             { 
                 id: 12, dni: "72092261", name: "LAZO DIAZ LIZ NAYELI", 
-                list: 15, wri: 15, spe: 14, rea: 14, plat: 16, prom1: 15, 
-                mid: 13, final: 18, spe_exam: 13, prom2: 14.5, final_grade: 15,
+                list: "15.0", wri: "14.5", spe: "14.0", rea: "14.0", plat: "16.1", prom1: "14.5", 
+                mid: "13.3", final: "17.7", spe_exam: "13.0", prom2: "14.5", final_grade: 15,
                 detailed: {
-                    list_tasks: [2, 4, 4, 4, 1], 
-                    wri_tasks: [3.5, 3.0, 3.0, 2.5, 1.5, 1.5], 
-                    spe_tasks: [3, 4, 3, 4], 
-                    rea_tasks: [3, 3, 3, 3, 2], 
-                    plat_prog: "49%", plat_time: "16 hrs", plat_done: "15 ej.",
+                    list_tasks: [3, 3, 3, 3, 3], // 15.0
+                    wri_tasks: [3.5, 3.0, 3.0, 2.0, 1.5, 1.5], // 14.5
+                    spe_tasks: [3, 4, 3, 4], // 14.0
+                    rea_tasks: [3, 3, 3, 3, 2], // 14.0
+                    plat_prog: "61%", plat_time: "16 hrs", plat_done: "16.1",
                     project: 3, tvshow: 4, midterm_calc: 13.3, final_calc: 17.7
                 }
             },
             { 
                 id: 13, dni: "70685838", name: "MERINO ROJAS YANETH MARUJA", 
-                list: 14, wri: 14, spe: 13, rea: 13, plat: 13, prom1: 13, 
-                mid: 13, final: 12, spe_exam: 13, prom2: 12.7, final_grade: 13,
+                list: "14.0", wri: "14.0", spe: "13.0", rea: "13.0", plat: "12.7", prom1: "13.4", 
+                mid: "13.0", final: "12.0", spe_exam: "13.0", prom2: "12.7", final_grade: 13,
                 detailed: {
-                    list_tasks: [3, 3, 3, 3, 2], 
-                    wri_tasks: [3.0, 3.0, 2.0, 2.0, 2.0, 2.0], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [2, 3, 3, 2, 3], 
-                    plat_prog: "39%", plat_time: "13 hrs", plat_done: "13 ej.",
+                    list_tasks: [3, 3, 3, 3, 2], // 14.0
+                    wri_tasks: [3.0, 3.0, 2.0, 2.0, 2.0, 2.0], // 14.0
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [2, 3, 3, 2, 3], // 13.0
+                    plat_prog: "48%", plat_time: "13 hrs", plat_done: "12.7",
                     project: 3, tvshow: 4, midterm_calc: 13.0, final_calc: 12.0
                 }
             },
             { 
                 id: 14, dni: "75777033", name: "OSCCO ZARABIA RIDER GILMAR", 
-                list: 15, wri: 14, spe: 14, rea: 14, plat: 16, prom1: 14, 
-                mid: 12, final: 18, spe_exam: 14, prom2: 14.5, final_grade: 14,
+                list: "14.5", wri: "14.0", spe: "14.0", rea: "14.0", plat: "16.3", prom1: "14.3", 
+                mid: "12.0", final: "17.7", spe_exam: "14.0", prom2: "14.5", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 4, 2, 2, 5], 
-                    wri_tasks: [3.5, 3.0, 2.0, 2.5, 1.5, 1.5], 
-                    spe_tasks: [3, 4, 3, 4], 
-                    rea_tasks: [3, 3, 3, 3, 2], 
-                    plat_prog: "50%", plat_time: "16 hrs", plat_done: "14 ej.",
+                    list_tasks: [3, 3, 3, 3, 2.5], // 14.5
+                    wri_tasks: [3.5, 3.0, 2.0, 2.5, 1.5, 1.5], // 14.0
+                    spe_tasks: [3, 4, 3, 4], // 14.0
+                    rea_tasks: [3, 3, 3, 3, 2], // 14.0
+                    plat_prog: "62%", plat_time: "16 hrs", plat_done: "16.3",
                     project: 4, tvshow: 4, midterm_calc: 12.0, final_calc: 17.7
                 }
             },
             { 
                 id: 15, dni: "71509206", name: "PAHUARA HUAMAN LUIS JONATAN", 
-                list: 11, wri: 14, spe: 12, rea: 12, plat: 17, prom1: 13, 
-                mid: 13, final: 17, spe_exam: 13, prom2: 14.2, final_grade: 13,
+                list: "12.0", wri: "14.0", spe: "11.5", rea: "12.0", plat: "16.8", prom1: "12.9", 
+                mid: "13.3", final: "16.6", spe_exam: "13.0", prom2: "14.2", final_grade: 14,
                 detailed: {
-                    list_tasks: [1, 3, 3, 1, 3], 
-                    wri_tasks: [4.0, 2.5, 3.0, 2.0, 1.0, 1.5], 
-                    spe_tasks: [2, 3, 3, 4], 
-                    rea_tasks: [2, 3, 2, 3, 2], 
-                    plat_prog: "51%", plat_time: "17 hrs", plat_done: "13 ej.",
+                    list_tasks: [2, 3, 3, 2, 2], // 12.0
+                    wri_tasks: [4.0, 2.5, 3.0, 2.0, 1.0, 1.5], // 14.0
+                    spe_tasks: [2, 3.5, 2, 4], // 11.5
+                    rea_tasks: [2, 3, 2, 3, 2], // 12.0
+                    plat_prog: "64%", plat_time: "17 hrs", plat_done: "16.8",
                     project: 4, tvshow: 3, midterm_calc: 13.3, final_calc: 16.6
                 }
             },
             { 
                 id: 16, dni: "72449579", name: "QUISPE DAVALOS MIGUEL EDUARDO", 
-                list: 13, wri: 13, spe: 12, rea: 13, plat: 10, prom1: 12, 
-                mid: 16, final: 17, spe_exam: 13, prom2: 15.0, final_grade: 14,
+                list: "13.0", wri: "13.0", spe: "12.0", rea: "13.0", plat: "10.1", prom1: "12.5", 
+                mid: "15.7", final: "17.1", spe_exam: "13.0", prom2: "15.0", final_grade: 14,
                 detailed: {
-                    list_tasks: [5, 3, 2, 2, 1], 
-                    wri_tasks: [2.0, 2.5, 2.5, 2.0, 2.0, 2.0], 
-                    spe_tasks: [2, 3, 3, 4], 
-                    rea_tasks: [2, 3, 2, 3, 3], 
-                    plat_prog: "31%", plat_time: "10 hrs", plat_done: "12 ej.",
+                    list_tasks: [3, 3, 2, 2, 3], // 13.0
+                    wri_tasks: [2.0, 2.5, 2.5, 2.0, 2.0, 2.0], // 13.0
+                    spe_tasks: [2, 3, 3, 4], // 12.0
+                    rea_tasks: [2, 3, 2, 3, 3], // 13.0
+                    plat_prog: "35%", plat_time: "10 hrs", plat_done: "10.1",
                     project: 4, tvshow: 3, midterm_calc: 15.7, final_calc: 17.1
                 }
             },
             { 
                 id: 17, dni: "74287828", name: "ROJAS DE LA CRUZ LIZ ARACELY", 
-                list: 14, wri: 16, spe: 14, rea: 13, plat: 14, prom1: 14, 
-                mid: 12, final: 13, spe_exam: 13, prom2: 12.8, final_grade: 14,
+                list: "14.0", wri: "16.0", spe: "14.0", rea: "13.0", plat: "14.1", prom1: "14.3", 
+                mid: "12.3", final: "13.0", spe_exam: "13.0", prom2: "12.8", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 4, 3, 3, 2], 
-                    wri_tasks: [4.0, 4.0, 3.0, 2.0, 1.5, 1.5], 
-                    spe_tasks: [3, 4, 3, 4], 
-                    rea_tasks: [2, 3, 3, 2, 3], 
-                    plat_prog: "43%", plat_time: "14 hrs", plat_done: "14 ej.",
+                    list_tasks: [2, 4, 3, 3, 2], // 14.0
+                    wri_tasks: [4.0, 4.0, 3.0, 2.0, 1.5, 1.5], // 16.0
+                    spe_tasks: [3, 4, 3, 4], // 14.0
+                    rea_tasks: [2, 3, 3, 2, 3], // 13.0
+                    plat_prog: "55%", plat_time: "14 hrs", plat_done: "14.1",
                     project: 3, tvshow: 4, midterm_calc: 12.3, final_calc: 13.0
                 }
             },
@@ -547,85 +552,85 @@
                     wri_tasks: [0, 0, 0, 0, 0, 0], 
                     spe_tasks: [0, 0, 0, 0], 
                     rea_tasks: [0, 0, 0, 0, 0], 
-                    plat_prog: "0%", plat_time: "0 hrs", plat_done: "0 ej.",
+                    plat_prog: "0%", plat_time: "0 hrs", plat_done: "0.0",
                     project: 0, tvshow: 0, midterm_calc: 0, final_calc: 0
                 }
             },
             { 
                 id: 19, dni: "73439612", name: "SILVA CACERES BRANDON", 
-                list: 14, wri: 13, spe: 12, rea: 12, plat: 16, prom1: 13, 
-                mid: 12, final: 16, spe_exam: 13, prom2: 13.6, final_grade: 13,
+                list: "14.0", wri: "13.5", spe: "12.0", rea: "13.5", plat: "16.1", prom1: "13.5", 
+                mid: "12.0", final: "16.0", spe_exam: "13.0", prom2: "14.0", final_grade: 14,
                 detailed: {
-                    list_tasks: [4, 3, 3, 2, 2], 
-                    wri_tasks: [2.5, 2.0, 2.5, 2.0, 2.0, 2.0], 
-                    spe_tasks: [2, 3, 3, 4], 
-                    rea_tasks: [2, 3, 2, 3, 2], 
-                    plat_prog: "49%", plat_time: "16 hrs", plat_done: "13 ej.",
+                    list_tasks: [3, 3, 3, 3, 2], // 14.0
+                    wri_tasks: [2.5, 2.0, 2.5, 2.0, 2.5, 2.0], // 13.5
+                    spe_tasks: [2, 3, 3, 4], // 12.0
+                    rea_tasks: [2, 3, 2.5, 3, 3], // 13.5
+                    plat_prog: "60%", plat_time: "16 hrs", plat_done: "16.1",
                     project: 4, tvshow: 3, midterm_calc: 12.0, final_calc: 16.0
                 }
             },
             { 
                 id: 20, dni: "75123219", name: "TORIBIO PEREZ AIMEC", 
-                list: 15, wri: 16, spe: 15, rea: 15, plat: 17, prom1: 15, 
-                mid: 16, final: 17, spe_exam: 14, prom2: 15.3, final_grade: 15,
+                list: "14.5", wri: "16.0", spe: "15.0", rea: "15.0", plat: "16.9", prom1: "15.3", 
+                mid: "15.7", final: "16.6", spe_exam: "14.0", prom2: "15.3", final_grade: 15,
                 detailed: {
-                    list_tasks: [1, 3, 3, 1, 2], 
-                    wri_tasks: [4.0, 4.0, 3.0, 2.0, 1.5, 1.5], 
-                    spe_tasks: [4, 4, 3, 4], 
-                    rea_tasks: [3, 4, 3, 3, 2], 
-                    plat_prog: "52%", plat_time: "17 hrs", plat_done: "15 ej.",
+                    list_tasks: [3, 3, 3, 3, 2.5], // 14.5
+                    wri_tasks: [4.0, 4.0, 3.0, 2.0, 1.5, 1.5], // 16.0
+                    spe_tasks: [4, 4, 3, 4], // 15.0
+                    rea_tasks: [3, 4, 3, 3, 2], // 15.0
+                    plat_prog: "65%", plat_time: "17 hrs", plat_done: "16.9",
                     project: 3, tvshow: 5, midterm_calc: 15.7, final_calc: 16.6
                 }
             },
             { 
                 id: 21, dni: "76650945", name: "UMERES SANCHEZ ELOY JHUNIOR", 
-                list: 13, wri: 14, spe: 13, rea: 12, plat: 17, prom1: 13, 
-                mid: 13, final: 16, spe_exam: 13, prom2: 14.0, final_grade: 14,
+                list: "13.0", wri: "14.0", spe: "13.0", rea: "12.0", plat: "16.9", prom1: "13.4", 
+                mid: "13.3", final: "16.0", spe_exam: "13.0", prom2: "14.0", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 3, 4, 2, 2], 
-                    wri_tasks: [4.0, 2.5, 2.5, 2.0, 1.5, 1.5], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [2, 3, 2, 3, 2], 
-                    plat_prog: "52%", plat_time: "17 hrs", plat_done: "13 ej.",
+                    list_tasks: [2, 3, 4, 2, 2], // 13.0
+                    wri_tasks: [4.0, 2.5, 2.5, 2.0, 1.5, 1.5], // 14.0
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [2, 3, 2, 3, 2], // 12.0
+                    plat_prog: "65%", plat_time: "17 hrs", plat_done: "16.9",
                     project: 3, tvshow: 4, midterm_calc: 13.3, final_calc: 16.0
                 }
             },
             { 
                 id: 22, dni: "60920823", name: "VIGURIA VILLENA ROSA ROSSIO", 
-                list: 15, wri: 16, spe: 13, rea: 14, plat: 17, prom1: 14, 
-                mid: 14, final: 15, spe_exam: 13, prom2: 13.9, final_grade: 14,
+                list: "14.5", wri: "15.5", spe: "13.0", rea: "14.0", plat: "16.5", prom1: "14.5", 
+                mid: "14.0", final: "14.9", spe_exam: "13.0", prom2: "13.9", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 2, 3, 3, 2], 
-                    wri_tasks: [4.0, 3.5, 3.0, 2.0, 1.5, 1.5], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [3, 3, 3, 3, 2], 
-                    plat_prog: "50%", plat_time: "17 hrs", plat_done: "14 ej.",
+                    list_tasks: [3, 3, 3, 3.5, 2], // 14.5
+                    wri_tasks: [4.0, 3.5, 3.0, 2.0, 1.5, 1.5], // 15.5
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [3, 3, 3, 3, 2], // 14.0
+                    plat_prog: "63%", plat_time: "17 hrs", plat_done: "16.5",
                     project: 3, tvshow: 4, midterm_calc: 14.0, final_calc: 14.9
                 }
             },
             { 
                 id: 23, dni: "77420495", name: "VILLALOBOS YAÑE FRANCO", 
-                list: 13, wri: 13, spe: 13, rea: 14, plat: 15, prom1: 13, 
-                mid: 8, final: 18, spe_exam: 15, prom2: 13.7, final_grade: 14,
+                list: "13.0", wri: "13.0", spe: "13.0", rea: "14.0", plat: "15.2", prom1: "13.4", 
+                mid: "8.0", final: "17.7", spe_exam: "15.0", prom2: "13.7", final_grade: 14,
                 detailed: {
-                    list_tasks: [2, 1, 2, 1, 3], 
-                    wri_tasks: [4.5, 2.5, 2.0, 1.0, 1.5, 1.5], 
-                    spe_tasks: [3, 3, 3, 4], 
-                    rea_tasks: [3, 4, 2, 2, 3], 
-                    plat_prog: "47%", plat_time: "15 hrs", plat_done: "13 ej.",
+                    list_tasks: [2, 3, 2, 3, 3], // 13.0
+                    wri_tasks: [4.5, 2.5, 2.0, 1.0, 1.5, 1.5], // 13.0
+                    spe_tasks: [3, 3, 3, 4], // 13.0
+                    rea_tasks: [3, 4, 2, 2, 3], // 14.0
+                    plat_prog: "58%", plat_time: "15 hrs", plat_done: "15.2",
                     project: 4, tvshow: 5, midterm_calc: 8.0, final_calc: 17.7
                 }
             },
             { 
                 id: 24, dni: "76235376", name: "ZUÑIGA SILVERA MARIELA ELIZABETH", 
-                list: 16, wri: 17, spe: 17, rea: 16, plat: 16, prom1: 16, 
-                mid: 16, final: 17, spe_exam: 13, prom2: 14.9, final_grade: 16,
+                list: "16.0", wri: "17.0", spe: "17.0", rea: "15.5", plat: "16.2", prom1: "16.4", 
+                mid: "15.7", final: "16.6", spe_exam: "13.0", prom2: "14.9", final_grade: 16,
                 detailed: {
-                    list_tasks: [3, 1, 3, 3, 5], 
-                    wri_tasks: [4.0, 4.5, 3.0, 2.5, 1.5, 1.5], 
-                    spe_tasks: [4, 4, 4, 5], 
-                    rea_tasks: [3, 4, 3, 3, 3], 
-                    plat_prog: "50%", plat_time: "16 hrs", plat_done: "16 ej.",
+                    list_tasks: [3, 3, 3, 3.5, 3.5], // 16.0
+                    wri_tasks: [4.0, 4.5, 3.0, 2.5, 1.5, 1.5], // 17.0
+                    spe_tasks: [4, 4, 4, 5], // 17.0
+                    rea_tasks: [3, 3.5, 3, 3, 3], // 15.5
+                    plat_prog: "64%", plat_time: "16 hrs", plat_done: "16.2",
                     project: 4, tvshow: 5, midterm_calc: 15.7, final_calc: 16.6
                 }
             }
@@ -697,7 +702,8 @@
                     el.className = "py-5 px-3 text-center font-bold text-slate-400 bg-slate-50/50 border-b border-slate-100 text-xs";
                 } else {
                     const num = parseFloat(value);
-                    if (num >= 11) {
+                    // Actualizado criterio semáforo a Nota 14 aprobatoria
+                    if (num >= 14) {
                         el.className = "py-5 px-3 text-center font-extrabold text-emerald-600 bg-emerald-50/10 border-b border-slate-100 text-xs";
                     } else {
                         el.className = "py-5 px-3 text-center font-extrabold text-red-500 bg-red-50/10 border-b border-slate-100 text-xs";
@@ -711,26 +717,30 @@
             renderCellText('col-grade-rea', student.rea);
             renderCellText('col-grade-plat', student.plat);
             
+            // Promedio 1
             const p1Cell = document.getElementById('col-grade-prom1');
             p1Cell.innerText = student.prom1;
+            // Evaluado según nota mínima 14
             p1Cell.className = `py-5 px-4 text-center font-black border-b border-indigo-100 text-sm ${
-                isNsp ? 'text-slate-400 bg-slate-50' : (student.prom1 >= 11 ? 'text-indigo-700 bg-indigo-50/30' : 'text-red-500 bg-red-50/20')
+                isNsp ? 'text-slate-400 bg-slate-50' : (parseFloat(student.prom1) >= 14 ? 'text-indigo-700 bg-indigo-50/30' : 'text-red-500 bg-red-50/20')
             }`;
 
             renderCellText('col-grade-mid', student.mid);
             renderCellText('col-grade-final', student.final);
             renderCellText('col-grade-spe-exam', student.spe_exam);
 
+            // Promedio 2
             const p2Cell = document.getElementById('col-grade-prom2');
             p2Cell.innerText = student.prom2;
             p2Cell.className = `py-5 px-4 text-center font-black border-b border-emerald-100 text-sm ${
-                isNsp ? 'text-slate-400 bg-slate-50' : (parseFloat(student.prom2) >= 11 ? 'text-emerald-700 bg-emerald-50/30' : 'text-red-500 bg-red-50/20')
+                isNsp ? 'text-slate-400 bg-slate-50' : (parseFloat(student.prom2) >= 14 ? 'text-emerald-700 bg-emerald-50/30' : 'text-red-500 bg-red-50/20')
             }`;
 
+            // Promedio Final Fila
             const pfCell = document.getElementById('col-grade-final-grade');
             pfCell.innerText = student.final_grade;
             pfCell.className = `py-5 px-5 text-center font-black border-b border-amber-200 text-sm border-l border-amber-200 ${
-                isNsp ? 'text-slate-400 bg-slate-100' : (student.final_grade >= 11 ? 'text-amber-950 bg-amber-100/60' : 'text-red-700 bg-red-50')
+                isNsp ? 'text-slate-400 bg-slate-100' : (student.final_grade >= 14 ? 'text-amber-950 bg-amber-100/60' : 'text-red-700 bg-red-50')
             }`;
 
 
@@ -741,20 +751,24 @@
             const highlightAdvice = document.getElementById('highlight-advisor-short');
 
             if (isNsp) {
+                // Configuración NSP (No se presentó - Gris)
                 highlightCard.className = "rounded-3xl p-8 flex flex-col justify-between text-center relative overflow-hidden transition-all duration-300 bg-slate-700 text-white shadow-xl shadow-slate-700/20";
                 highlightStatus.innerText = "No se presentó";
                 highlightGrade.innerText = "NSP";
-                highlightAdvice.innerText = "No cuenta con actividades completadas en el ciclo.";
+                highlightAdvice.innerText = "No cuenta con calificaciones completadas en el ciclo.";
             } else {
-                const approved = student.final_grade >= 11;
+                // Evaluado con Nota 14 aprobatoria
+                const approved = student.final_grade >= 14;
                 if (approved) {
+                    // Configuración Aprobado (Verde Premium)
                     highlightCard.className = "rounded-3xl p-8 flex flex-col justify-between text-center relative overflow-hidden transition-all duration-300 bg-emerald-600 text-white shadow-xl shadow-emerald-600/20";
                     highlightStatus.innerText = "¡Aprobado!";
-                    highlightAdvice.innerText = "Ha superado los criterios mínimos del curso.";
+                    highlightAdvice.innerText = "Felicidades, has superado satisfactoriamente los criterios mínimos del curso.";
                 } else {
+                    // Configuración Desaprobado (Rojo Alerta)
                     highlightCard.className = "rounded-3xl p-8 flex flex-col justify-between text-center relative overflow-hidden transition-all duration-300 bg-red-600 text-white shadow-xl shadow-red-600/20";
                     highlightStatus.innerText = "Desaprobado";
-                    highlightAdvice.innerText = "Requiere reforzamiento intensivo adicional.";
+                    highlightAdvice.innerText = "Se aconseja estructurar un plan de reforzamiento intensivo adicional.";
                 }
                 highlightGrade.innerText = student.final_grade;
             }
@@ -793,22 +807,22 @@
 
             // Reading
             document.getElementById('badge-rea-total').innerText = `Total: ${getValStr(student.rea)}`;
-            document.getElementById('det-rea-1').innerText = getValStr(student.detailed?.rea_tasks?.[0] || student.detailed?.list_tasks?.[0]);
-            document.getElementById('det-rea-2').innerText = getValStr(student.detailed?.rea_tasks?.[1] || student.detailed?.list_tasks?.[1]);
-            document.getElementById('det-rea-3').innerText = getValStr(student.detailed?.rea_tasks?.[2] || student.detailed?.list_tasks?.[2]);
-            document.getElementById('det-rea-4').innerText = getValStr(student.detailed?.rea_tasks?.[3] || student.detailed?.list_tasks?.[3]);
-            document.getElementById('det-rea-5').innerText = getValStr(student.detailed?.rea_tasks?.[4] || student.detailed?.list_tasks?.[4]);
+            document.getElementById('det-rea-1').innerText = getValStr(student.detailed?.rea_tasks?.[0]);
+            document.getElementById('det-rea-2').innerText = getValStr(student.detailed?.rea_tasks?.[1]);
+            document.getElementById('det-rea-3').innerText = getValStr(student.detailed?.rea_tasks?.[2]);
+            document.getElementById('det-rea-4').innerText = getValStr(student.detailed?.rea_tasks?.[3]);
+            document.getElementById('det-rea-5').innerText = getValStr(student.detailed?.rea_tasks?.[4]);
 
             // Plataforma
             document.getElementById('badge-plat-total').innerText = `Total: ${getValStr(student.plat)}`;
             document.getElementById('det-plat-prog').innerText = getValStr(student.detailed?.plat_prog);
             document.getElementById('det-plat-time').innerText = getValStr(student.detailed?.plat_time);
-            document.getElementById('det-plat-done').innerText = getValStr(student.detailed?.plat_done);
+            document.getElementById('det-plat-done').innerText = getValStr(student.plat);
 
             // Exámenes y Adicionales (Promedio 2)
             document.getElementById('badge-prom2-total').innerText = `Prom 2: ${getValStr(student.prom2)}`;
-            document.getElementById('det-mid-exam').innerText = getValStr(student.detailed?.midterm_calc || student.mid);
-            document.getElementById('det-fin-exam').innerText = getValStr(student.detailed?.final_calc || student.final);
+            document.getElementById('det-mid-exam').innerText = getValStr(student.mid);
+            document.getElementById('det-fin-exam').innerText = getValStr(student.final);
             document.getElementById('det-project').innerText = getValStr(student.detailed?.project !== undefined ? student.detailed.project : "3.0");
             document.getElementById('det-tvshow').innerText = getValStr(student.detailed?.tvshow !== undefined ? student.detailed.tvshow : "4.0");
             document.getElementById('det-spe-exam').innerText = getValStr(student.spe_exam);
